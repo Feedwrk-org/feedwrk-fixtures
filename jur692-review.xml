@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  JUR-692 — the review-state fixture feed (amendment #17).
+
+  Every state the Mapping Studio review shots need is produced by the SHAPE of
+  this document going through the real analyzer — never by hand-set flags:
+
+    sku / brand / ean   exact-named, filled on every record  -> auto-applied with
+                        exact evidence -> the "decisions made automatically" fold
+    item_label          the real product title under a name no guess survives
+                        -> Title stays a REQUIRED BLANK blocker
+    description         present on 6 of 10 records -> mapped but PARTIAL FILL:
+                        the amber "60% filled" badge, and exact evidence that
+                        still must NOT fold (fill < 1). By design NOT a queue
+                        item — an optional field mapped to a sparse source is
+                        not a defect to raise (blankCause.ts)
+    price /             two near-identical unmarked money columns -> the E-1
+    unit_price          near-tie money disambiguation ask on the Price row
+                        (and no VAT marker in either name, so the basis stays
+                        the operator's explicit decision)
+    qty / weight_kg     plausible-but-not-exact names -> mid-evidence states
+    guid                internal plumbing, mapped nowhere -> PRE-SKIPPED with Undo
+    colour              5 of 10, mapped nowhere -> an honest unused source column
+    misc_info           junk on every record -> unmapped texture for "unsure"
+
+  Served in dev from /dev-fixtures/ (gitignored copy made by the seed script);
+  the canonical bytes live here, in the repo.
+-->
+<products>
+  <product>
+    <guid>f6a1c2d4-0001-4a10-9e01-aaaa00000001</guid>
+    <sku>NOC-OAK-CH-01</sku>
+    <brand>Nordic Oak Co</brand>
+    <ean>4006381333931</ean>
+    <item_label>Solid Oak Dining Chair</item_label>
+    <description>A solid oak dining chair with a natural oil finish.</description>
+    <price>149.00</price>
+    <unit_price>149.00</unit_price>
+    <qty>42</qty>
+    <weight_kg>6.4</weight_kg>
+    <colour>Natural oak</colour>
+    <misc_info>rev-2 pallet A; see notes</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0002-4a10-9e01-aaaa00000002</guid>
+    <sku>ML-SOFA-3S-SAND</sku>
+    <brand>Maison Living</brand>
+    <ean>5012345678900</ean>
+    <item_label>Linen 3-Seater Sofa Sand</item_label>
+    <description>Three-seater sofa upholstered in pure washed linen.</description>
+    <price>1290.00</price>
+    <unit_price>1290.00</unit_price>
+    <qty>6</qty>
+    <weight_kg>48.0</weight_kg>
+    <colour>Sand</colour>
+    <misc_info>container 44B</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0003-4a10-9e01-aaaa00000003</guid>
+    <sku>LS-LAMP-BR-03</sku>
+    <brand>Lumen Studio</brand>
+    <ean>4006381333948</ean>
+    <item_label>Brass Table Lamp</item_label>
+    <description>Warm brass table lamp with a linen shade.</description>
+    <price>89.50</price>
+    <unit_price>179.00</unit_price>
+    <qty>0</qty>
+    <weight_kg>1.8</weight_kg>
+    <colour>Brass</colour>
+    <misc_info>eol Q3</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0004-4a10-9e01-aaaa00000004</guid>
+    <sku>AN-RUG-160230</sku>
+    <brand>Atelier Nord</brand>
+    <ean>4006381333955</ean>
+    <item_label>Handwoven Wool Rug 160x230</item_label>
+    <description>Handwoven 100% wool rug in undyed yarns.</description>
+    <price>349.00</price>
+    <unit_price>349.00</unit_price>
+    <qty>14</qty>
+    <weight_kg>9.2</weight_kg>
+    <colour>Undyed</colour>
+    <misc_info>batch 118</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0005-4a10-9e01-aaaa00000005</guid>
+    <sku>CC-VASE-MW-05</sku>
+    <brand>Clay and Co</brand>
+    <ean>5012345678917</ean>
+    <item_label>Stoneware Vase Matte White</item_label>
+    <description>Matte white stoneware vase, wheel-thrown.</description>
+    <price>39.00</price>
+    <unit_price>39.00</unit_price>
+    <qty>120</qty>
+    <weight_kg>0.9</weight_kg>
+    <colour>Matte white</colour>
+    <misc_info>fragile; foam wrap</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0006-4a10-9e01-aaaa00000006</guid>
+    <sku>NOC-TBL-EXT-06</sku>
+    <brand>Nordic Oak Co</brand>
+    <ean>4006381333962</ean>
+    <item_label>Extending Oak Dining Table</item_label>
+    <description>Extending oak dining table, seats six to eight.</description>
+    <price>899.00</price>
+    <unit_price>899.00</unit_price>
+    <qty>3</qty>
+    <weight_kg>62.5</weight_kg>
+    <misc_info>two-box shipment</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0007-4a10-9e01-aaaa00000007</guid>
+    <sku>ML-CHAIR-VLT-07</sku>
+    <brand>Maison Living</brand>
+    <ean>5012345678924</ean>
+    <item_label>Velvet Accent Chair Forest</item_label>
+    <price>259.00</price>
+    <unit_price>1036.00</unit_price>
+    <qty>28</qty>
+    <weight_kg>11.3</weight_kg>
+    <misc_info>restock wk 34</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0008-4a10-9e01-aaaa00000008</guid>
+    <sku>LS-PEND-GL-08</sku>
+    <brand>Lumen Studio</brand>
+    <ean>4006381333979</ean>
+    <item_label>Glass Pendant Light</item_label>
+    <price>119.00</price>
+    <unit_price>119.00</unit_price>
+    <qty>9</qty>
+    <weight_kg>2.1</weight_kg>
+    <misc_info>hand-blown; check on arrival</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0009-4a10-9e01-aaaa00000009</guid>
+    <sku>SG-THROW-WF-09</sku>
+    <brand>Soft Goods Ltd</brand>
+    <ean>5012345678931</ean>
+    <item_label>Cotton Waffle Throw</item_label>
+    <price>49.00</price>
+    <unit_price>49.00</unit_price>
+    <qty>64</qty>
+    <weight_kg>1.1</weight_kg>
+    <misc_info>bagged</misc_info>
+  </product>
+  <product>
+    <guid>f6a1c2d4-0010-4a10-9e01-aaaa00000010</guid>
+    <sku>AN-SBRD-180-10</sku>
+    <brand>Atelier Nord</brand>
+    <ean>4006381333986</ean>
+    <item_label>Walnut Sideboard 180cm</item_label>
+    <price>749.00</price>
+    <unit_price>749.00</unit_price>
+    <qty>5</qty>
+    <weight_kg>71.0</weight_kg>
+    <misc_info>keys in drawer 1</misc_info>
+  </product>
+</products>
