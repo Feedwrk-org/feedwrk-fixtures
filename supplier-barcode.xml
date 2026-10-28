@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The supplier feed of the feedwrk-ui-regressions e2e group SUP (feedwrk-backend PR 555, BUG-D1 O1).
+
+  Four products under plain field names, so the mapping draft has nothing to ask:
+    ean   a valid EAN-13 on the first three products and absent on the fourth.
+          The draft maps it to variant.barcode; the fourth product then carries
+          the missing_gtin warning ("no barcode") on its product page.
+  Synthetic data only.
+-->
+<products>
+  <product>
+    <id>sup-barcode-1</id>
+    <sku>SUP-OAK-CHAIR</sku>
+    <title>Supplier Oak Dining Chair</title>
+    <brand>Supplier Test Co</brand>
+    <description>A solid oak dining chair with a natural oil finish.</description>
+    <ean>4006381333931</ean>
+    <price>149.00</price>
+    <stock>12</stock>
+  </product>
+  <product>
+    <id>sup-barcode-2</id>
+    <sku>SUP-LINEN-SOFA</sku>
+    <title>Supplier Linen Sofa</title>
+    <brand>Supplier Test Co</brand>
+    <description>A three-seater sofa upholstered in washed linen.</description>
+    <ean>5012345678900</ean>
+    <price>899.00</price>
+    <stock>3</stock>
+  </product>
+  <product>
+    <id>sup-barcode-3</id>
+    <sku>SUP-WOOL-RUG</sku>
+    <title>Supplier Wool Rug</title>
+    <brand>Supplier Test Co</brand>
+    <description>A hand-woven wool rug, 160 by 230 cm.</description>
+    <ean>4006381333948</ean>
+    <price>249.00</price>
+    <stock>7</stock>
+  </product>
+  <product>
+    <id>sup-barcode-4</id>
+    <sku>SUP-BRASS-LAMP</sku>
+    <title>Supplier Brass Lamp</title>
+    <brand>Supplier Test Co</brand>
+    <description>A brass table lamp with a linen shade.</description>
+    <price>119.00</price>
+    <stock>9</stock>
+  </product>
+</products>
